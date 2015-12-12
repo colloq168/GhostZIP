@@ -3,7 +3,7 @@ var path = require('path'),
 config = {
 
     production: {
-        url: 'http://EasyGhost',
+        url: 'http://localhost',
         mail: {},
         database: {
             client: 'sqlite3',
