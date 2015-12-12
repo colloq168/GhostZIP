@@ -40,25 +40,10 @@ clear
 echo '[Node.js version]'
 node -v 
 
-##Download Ghost blog
-mkdir -p /home/wwwroot/ghost
-chown -R www:www /home/wwwroot/ghost
-cd /home/wwwroot/ghost
-wget https://raw.githubusercontent.com/colloq168/GhostZIP/master/Ghost-0.6.3-zh-full.zip
-apt-get install -y unzip
-unzip Ghost-0.6.3-zh-full.zip
-wget http://theme.zzfly.net/EasyGhost/config.js
-##Config Ghost
-sed -i "s/EasyGhost/"$dm"/g" 'config.js'
-
-## Finish Ghost blog
-npm install forever -g
-NODE_ENV=production forever start index.js
-
 ##Config vhost
 cd /etc/lighttpd
 mv lighttpd.conf old.conf
-wget http://theme.zzfly.net/EasyGhost/lighttpd.conf
+wget wget https://raw.githubusercontent.com/colloq168/GhostZIP/master/lighttpd.conf
 sed -i "s/EasyGhost/"$dm"/g" 'lighttpd.conf'
 service lighttpd restart
 
