@@ -13,7 +13,7 @@ echo ""
 echo "        Powered by NodeJS + SQLite3 + LightTPD  "
 echo "     Made by Rytia | http://www.zzfly.net/EasyGhost"
 echo ""
-read -p "Please input your Domain for Ghost blog " dm
+
 
 ##Install LightTPD SQLite3
 apt-get remove -y apache*
