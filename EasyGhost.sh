@@ -41,12 +41,11 @@ echo '[Node.js version]'
 node -v 
 
 ##Download Ghost blog
-mkdir -p /ace/code/ghost
-chown -R www:www /ace/code/ghost
-cd /ace/code/ghost
+cd /ace/code
 wget https://raw.githubusercontent.com/colloq168/GhostZIP/master/Ghost-0.6.3-zh-full.zip
 apt-get install -y unzip
 unzip Ghost-0.6.3-zh-full.zip
+cd /ace/code/ghost
 wget https://raw.githubusercontent.com/colloq168/GhostZIP/master/config.js
 ##Config Ghost
 sed -i "s/EasyGhost/"$dm"/g" 'config.js'
