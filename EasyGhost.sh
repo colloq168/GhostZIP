@@ -41,11 +41,12 @@ echo '[Node.js version]'
 node -v 
 
 ##Download Ghost blog
-cd /ace/code
+mkdir -p /home/wwwroot/ghost
+chown -R www:www /home/wwwroot/ghost
+cd /home/wwwroot/ghost
 wget https://raw.githubusercontent.com/colloq168/GhostZIP/master/Ghost-0.6.3-zh-full.zip
 apt-get install -y unzip
 unzip Ghost-0.6.3-zh-full.zip
-cd /ace/code/ghost
 wget https://raw.githubusercontent.com/colloq168/GhostZIP/master/config.js
 ##Config Ghost
 sed -i "s/EasyGhost/"$dm"/g" 'config.js'
@@ -64,6 +65,6 @@ service lighttpd restart
 echo ""
 echo "--------------------------------------------"
 echo '[Finished]'
-echo 'Files: /ace/code/ghost'
-echo 'Database: /ace/code/ghost/content/data/ghost.db'
+echo 'Files: /home/wwwroot/ghost'
+echo 'Database: /home/wwwroot/ghost/content/data/ghost.db'
 echo 'Congratulations! You can access your Ghost blog now!'
