@@ -41,9 +41,9 @@ echo '[Node.js version]'
 node -v 
 
 ##Download Ghost blog
-mkdir -p /home/wwwroot/ghost
-chown -R www:www /home/wwwroot/ghost
-cd /home/wwwroot/ghost
+mkdir -p /ace/code/ghost
+chown -R www:www /ace/code/ghost
+cd /ace/code/ghost
 wget https://raw.githubusercontent.com/colloq168/GhostZIP/master/Ghost-0.6.3-zh-full.zip
 apt-get install -y unzip
 unzip Ghost-0.6.3-zh-full.zip
@@ -65,6 +65,6 @@ service lighttpd restart
 echo ""
 echo "--------------------------------------------"
 echo '[Finished]'
-echo 'Files: /home/wwwroot/ghost'
-echo 'Database: /home/wwwroot/ghost/content/data/ghost.db'
+echo 'Files: /ace/code/ghost'
+echo 'Database: /ace/code/ghost/content/data/ghost.db'
 echo 'Congratulations! You can access your Ghost blog now!'
